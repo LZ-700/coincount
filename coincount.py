@@ -1,21 +1,19 @@
-
-
-
-f= open("coincount.txt" "w")
+f = open("coincount.txt" "w")
 
 print("What is your name?")
-n = input("Member name: ")
-f.write(n)
+name = input("Member name: ")
+f.write(name)
 
-P = True
-while P:
-    print("Input coin type.")
-    c = input("Coin type: ")
-#if c is not 
-f.write(c)
+while True:
+    cointype = input("Input Coin type: ")
+    if cointype is not ["£2"]:
+        print("Sorry, I didn't understand that.")
+        continue
+    else:
+        break
 
 print("Give the weight of the bag.")
-w = input("bag weight (g): ")
-f.write(int(w))
+weight = input("bag weight (g): ")
+f.write(int(weight))
 f.close()
 
